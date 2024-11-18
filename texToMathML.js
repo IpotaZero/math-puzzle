@@ -21,7 +21,6 @@ const wrapIndentWithDivs = (text) => {
 // 数式を表示するやつ
 const texToMathML = () => {
     document.querySelectorAll(".note").forEach((note) => {
-        console.log(note)
         note.innerHTML = note.innerHTML.replace(/'([^']*?)'/g, (match, p1) => TeXZilla.toMathMLString(p1))
     })
 }

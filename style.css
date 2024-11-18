@@ -8,11 +8,17 @@ body {
 
     justify-items: center;
 
+    overflow: auto;
+
     width: 100%;
 }
 
 summary {
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
 }
 
 p,
@@ -52,19 +58,36 @@ main {
 
     padding: 0 2rem;
 
-    overflow: auto;
-
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
-    html,
+    header {
+        height: 60px;
+    }
+
     body {
-        font-size: 72px;
+        font-size: 12px;
+    }
+
+    main {
+        padding-top: 80px;
+        width: 100%;
     }
 
     .note {
-        line-height: 2.25rem; /* 文字サイズ36pxに合わせた行間 */
-        background-size: 100% 2.25rem; /* 行間に合わせて背景サイズ調整 */
+        background-size: 100% 0.75rem; /* 行間の高さに合わせて調整 */
+
+        line-height: 0.75rem;
+
+        width: 100%;
+
+        padding-left: 1rem;
+
+        margin: auto;
+    }
+
+    .indent {
+        padding-left: 1rem;
     }
 }
