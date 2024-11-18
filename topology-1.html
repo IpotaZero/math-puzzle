@@ -1,0 +1,64 @@
+<h2>§1 位相空間</h2>
+
+<div class="note">
+    <br />
+    1.1
+    <br />
+    '(X,\mathscr{O}):'位相空間<br />
+    'S \subset X'<br />
+    '(S,\mathscr{O}_S):'部分位相空間<br />
+    <br />
+    (1)包含写像'i:S \rightarrow X'が開写像<br />
+    (2)'S'が'X'の開集合<br />
+    <br />
+    Claim:(1)'\Leftrightarrow'(2) <br />
+    <br />
+
+    <details>
+        <summary>証明っ☆</summary>
+        [Claim:(1)'\Leftrightarrow'(2)]
+        <div class="indent">
+            [' \Rightarrow ']
+            <div class="indent">
+                (1)とする <br />
+                <br />
+                [(2):'S \in \mathscr{O}']
+                <div class="indent">
+                    'S \in \mathscr{O}_S'<br />
+                    <br />
+                    'i'は開写像だから<br />
+                    'i(S) \in \mathscr{O}'<br />
+                    <br />
+                    したがって<br />
+                    'S \in \mathscr{O}'<br />
+                </div>
+            </div>
+
+            [' \Leftarrow ']
+            <div class="indent">
+                (2)とする <br />
+                <br />
+                [(1):'\!^\forall U \in \mathscr{O}_S, i(U) \in \mathscr{O}']
+                <div class="indent">
+                    'U \in \mathscr{O}_S'をとる<br />
+                    <br />
+                    ['i(U) \in \mathscr{O}']
+                    <div class="indent">
+                        ' U \in \mathscr{O}_S 'だから<br />
+                        '\!^\exists V \in \mathscr{O};U = V \cap S'<br />
+                        そのように'V'をとる<br />
+                        <br />
+                        ' i(U) = i(V \cap S) = V \cap S'<br />
+                        ' V,S \in \mathscr{O}'だから<br />
+                        ' V \cap S \in \mathscr{O}'<br />
+                        <br />
+                        よって<br />
+                        'i(U) \in \mathscr{O}'<br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </details>
+
+    <br /><br />
+</div>
