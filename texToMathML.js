@@ -24,3 +24,16 @@ const texToMathML = () => {
         note.innerHTML = note.innerHTML.replace(/'([^']*?)'/g, (match, p1) => TeXZilla.toMathMLString(p1))
     })
 }
+
+// バーを付けるやつ
+const extendsTeXExpression = (input) => {
+    return input.replace(/'([^']*)'/g, (match, innerContent) => {
+        // innerContent内の \-{string} を置換
+        const replacedContent = innerContent
+            .replace(/\\-\{(.*?)\}/g, `'<span class="overline">'$1'</span>'`)
+            .replace(/\\ker/g, `\\mathrm{Ker}`)
+            .replace(/\\im/g, `\\mathrm{Im}`)
+        // 全体の置換結果を返す
+        return `'${replacedContent}'`
+    })
+}

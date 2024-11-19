@@ -4,7 +4,7 @@ const loadContent = async (page, to) => {
     try {
         const response = await fetch(page, { cache: "no-store" })
         const text = await response.text()
-        insertHTML(wrapIndentWithDivs(text), to)
+        insertHTML(extendsTeXExpression(wrapIndentWithDivs(text)), to)
     } catch (error) {
         console.error(error)
         insertHTML(`えらー`, to)

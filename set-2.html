@@ -10,7 +10,7 @@
 'A \subset B' <br />
 'x \notin B' <br />
 <br />
-Claim: 'x \notin A' <br>
+Show: 'x \notin A' <br>
 <br />
 <details>
 <summary>証明</summary>
@@ -26,12 +26,14 @@ Claim: 'x \notin A' <br>
 <h3>2.2</h3>
 'x \notin A \cup B' <br>
 <br>
-Claim: 'x \notin A'<br>
+Show: 'x \notin A'<br>
 <br>
 <details>
 <summary>証明</summary>
 [Claim: 'x \notin A']
     'x \notin A \cup B'だから
+    '\not (x \in A \cup B)'
+    '\not (x \in A \vee x \in B)'
     'x \notin A \wedge x \notin B'
     とくに
     'x \notin A'
@@ -43,7 +45,7 @@ Claim: 'x \notin A'<br>
 'A \subset B' <br />
 <br />
 <h4>(1)</h4>
-Claim: 'A \setminus C \subset B \setminus C' <br>
+Show: 'A \setminus C \subset B \setminus C' <br>
 <br />
 <details>
 <summary>証明</summary>
@@ -56,8 +58,10 @@ Claim: 'A \setminus C \subset B \setminus C' <br>
             'x \in A \wedge x \notin C' 
             とくに
             'x \in A \subset B'
+            <br>
             よって
-            ['x \in B']
+            'x \in B'
+            <br>
         ['x \notin C']
             'x \in A \setminus C'だから
             'x \in A \wedge x \notin C'
@@ -67,7 +71,7 @@ Claim: 'A \setminus C \subset B \setminus C' <br>
 <br />
 
 <h4>(2)</h4>
-Claim: 'C \setminus B \subset C \setminus A' <br>
+Show: 'C \setminus B \subset C \setminus A' <br>
 <br />
 <details>
 <summary>証明</summary>
@@ -80,12 +84,13 @@ Claim: 'C \setminus B \subset C \setminus A' <br>
             'x \in C \wedge x \notin B'
             とくに
             'x \in C'
-
+            <br>
         ['x \notin A']
             'x \in C \setminus B'だから
             'x \in C \wedge x \notin B'
             とくに
             'x \notin B \supset A'
+            <br>
             よって
             'x \notin A'
 </details>
@@ -96,7 +101,7 @@ Claim: 'C \setminus B \subset C \setminus A' <br>
 (1) 'A \subset B' <br>
 (2) 'X \setminus B \subset X \setminus A' <br>
 <br>
-Claim: (1) '\Leftrightarrow' (2) <br>
+Show: (1) '\Leftrightarrow' (2) <br>
 <br>
 <details>
 <summary>証明</summary>
@@ -106,30 +111,30 @@ Claim: (1) '\Leftrightarrow' (2) <br>
         
         [(2): 'X \setminus B \subset X \setminus A' i.e. '\forall x \in X \setminus B,x \in X \setminus A']
             'x \in X \setminus B' をとる
-            
+            <br>
             ['x \in X \setminus A' i.e. 'x \in X \wedge x \notin A']
                 ['x \in X']
                     'x \in X \setminus B' だから
                     'x \in X'
-                    
+                    <br>
                 ['x \notin A']
                     'x \in X \setminus B' だから
                     'x \notin B \supset A'
                     <br>
                     よって
                     'x \notin A'
-                    
+                    <br>
     ['\Leftarrow']
         (2)とする
-
+        <br>
         [(1): 'A \subset B' i.e. '\forall x \in A, x \in B']
             'x \in A' をとる
-
+            <br>
             ['x \in B' i.e. 'x \in X \setminus (X \setminus B)' i.e. 'x \in X \wedge x \notin X \setminus B']
                 ['x \in X']
                     'x \in A \subset X' だから
                     'x \in X'
-
+                    <br>
                 ['x \notin X \setminus B']
                     'x \in A' だから
                     'x \in X \setminus (X \setminus A)'
@@ -140,106 +145,112 @@ Claim: (1) '\Leftrightarrow' (2) <br>
                     よって
                     'x \notin X \setminus B'
 </details>
+<br>
 
 <h3>2.5(ド・モドルガンの法則) ☆☆☆☆☆</h3>
 'A,B \subset X' <br>
 <br>
 (1) <br>
-Claim: 'X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)' <br>
+Show: 'X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)' <br>
 <br>
 <details>
 <summary>証明</summary>
 [Claim: 'X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)']
     ['\subset : \forall x \in X \setminus (A \cup B), x \in (X \setminus A) \cap (X \setminus B)']
         'x \in X \setminus (A \cup B)'をとる
-
+        <br>
         ['x \in (X \setminus A) \cap (X \setminus B)']
             ['x \in X \setminus A' i.e. 'x \in X \wedge x \notin A']
                 ['x \in X']
                     'x \in X \setminus (A \cup B)'だから
                     'x \in X'
-
+                    <br>
                 ['x \notin A']
                     'x \in X \setminus (A \cup B)'だから
                     'x \notin A \cup B'
+                    <br>
                     よって
                     'x \notin A'
-
+                    <br>
             ['x \in X \setminus B']
                 ['x \in X']
                     上と同様
-
+                    <br>
                 ['x \notin B']
                     'x \in X \setminus (A \cup B)'だから
                     'x \notin A \cup B'
+                    <br>
                     よって
                     'x \notin B'
-
+                    <br>
     ['\supset : \forall x \in (X \setminus A) \cap (X \setminus B), x \in X \setminus (A \cup B)']
         'x \in (X \setminus A) \cap (X \setminus B)'をとる
-
+        <br>
         ['x \in X \setminus (A \cup B)' i.e. 'x \in X \wedge x \notin A \cup B']
             ['x \in X']
                 'x \in (X \setminus A) \cap (X \setminus B)'だから
                 'x \in X \setminus A'
+                <br>
                 よって
                 'x \in X'
-
+                <br>
             ['x \notin A \cup B']
                 'x \in (X \setminus A) \cap (X \setminus B)'だから
                 'x \notin A \wedge x \notin B'
+                <br>
                 よって
                 '\not (x \in A \vee x \in B)'
                 '\not (x \in A \cup B)'
                 'x \notin A \cup B'
-            
+                
 </details>
 <br>
 (2) <br>
-Claim: 'X \setminus (A \cap B) = (X \setminus A) \cup (X \setminus B)' <br>
+Show: 'X \setminus (A \cap B) = (X \setminus A) \cup (X \setminus B)' <br>
 <br>
 <details>
 <summary>証明</summary>
 [Claim: 'X \setminus (A \cap B) = (X \setminus A) \cup (X \setminus B)']
     ['\subset : \forall x \in X \setminus (A \cap B), x \in (X \setminus A) \cup (X \setminus B)']
         'x \in X \setminus (A \cap B)'をとる
-
+        <br>
         ['x \in (X \setminus A) \cup (X \setminus B)']
             'x \in X \setminus (A \cap B)'だから
             'x \in X \wedge x \notin A \cap B'
             とくに
                 'x \in X'
                 'x \notin A \vee x \notin B'
-            
+            <br>
             'x \notin A'のとき
                 'x \in X \setminus A'
-
+                <br>
             'x \notin B'のとき
                 'x \in X \setminus B'
-
+                <br>
     ['\supset : \forall x \in (X \setminus A) \cup (X \setminus B), x \in X \setminus (A \cap B)']
         'x \in (X \setminus A) \cup (X \setminus B)'をとる
-
+        <br>
         ['x \in X \setminus (A \cap B)']
             ['x \in X']
                 'x \in (X \setminus A) \cup (X \setminus B)'だから
                 'x \in X \setminus A \vee x \in X \setminus B'
-
+                <br>
                 'x \in X \setminus A'のとき
                     'x \in X'
-
+                    <br>
                 'x \in X \setminus B'のとき
                     'x \in X'
-
+                    <br>
             ['x \notin A \cap B' i.e. '\not (x \in A \wedge x \in B)' i.e. 'x \notin A \vee x \notin B']
                 上と同様に
                 'x \in X \setminus A \vee x \in X \setminus B'
-
+                <br>
                 'x \in X \setminus A'のとき
                     'x \notin A'
-
+                    <br>
                 'x \in X \setminus B'のとき
                     'x \notin B'
+                    <br>
 
 </details>
 <br>

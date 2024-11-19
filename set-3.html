@@ -1,8 +1,10 @@
-<h2>§3 写像</h2>
+<h2>§3 像・逆像</h2>
 
 <!-- prettier-ignore -->
 <div class="note">
-'X,Y:'集合<br>
+<br>
+<br>
+'X,Y:'集合 <br>
 'f:X \rightarrow Y:'写像 <br>
 'A,A_1,A_2 \subset X' <br>
 'B,B_1,B_2 \subset Y' <br>
@@ -10,8 +12,8 @@
 
 <h3>3.1 ☆☆☆</h3>
 'A_1 \subset A_2' <br>
-Claim: 'f(A_1) \subset f(A_2)'
-
+Show: 'f(A_1) \subset f(A_2)' <br>
+<br>
 <details>
 <summary>証明</summary>
 [Claim: 'f(A_1) \subset f(A_2)' i.e. '\forall y \in f(A_1), y \in f(A_2)']
@@ -20,6 +22,7 @@ Claim: 'f(A_1) \subset f(A_2)'
     ['y \in f(A_2)' i.e. '\exists x \in A_2; y = f(x)']
         'y \in f(A_1)'だから
         '\exists x \in A_1; y = f(x)'
+        そのように'x'をとる
         <br>
         'x \in A_1 \subset A_2'だから
         'x \in A_2'
@@ -27,25 +30,123 @@ Claim: 'f(A_1) \subset f(A_2)'
         ['y = f(x)']
             'x'の取り方より
             'y = f(x)'
-
+            <br>
 </details>
 <br>
 
-<h3>3.2 ☆☆☆</h3>
-'A_1 \subset A_2' <br>
-Claim: 'f(A_1 \cup A_2) = f(A_1) \cup f(A_2)'
-
+<h3>3.2 ☆☆☆☆</h3>
+Show: 'f(A_1 \cup A_2) = f(A_1) \cup f(A_2)' <br>
+<br>
 <details>
 <summary>証明</summary>
 [Claim: 'f(A_1 \cup A_2) = f(A_1) \cup f(A_2)']
     ['\subset: \forall y \in f(A_1 \cup A_2), y \in f(A_1) \cup f(A_2)']
-        y \in f(A_1 \cup A_2)
+        'y \in f(A_1 \cup A_2)'をとる
         <br>
-        [y \in f(A_1) \cup f(A_2)]
+        ['y \in f(A_1) \cup f(A_2)' i.e. 'y \in f(A_1) \vee y \in f(A_2)' i.e. '(\exists x \in A_1; y = f(x)) \vee (\exists x \in A_2; y = f(x))']
+            'y \in f(A_1 \cup A_2)'だから
+            '\exists x \in A_1 \cup A_2; y = f(x)'
+            そのように 'x' をとる
+            <br>
+            'x \in A_1 \cup x \in A_2'だから
+            'x \in A_1 \vee x \in A_2'
+            <br>
+            ['y = f(x)']
+                'x'の取り方より
+                'y = f(x)'
+                <br>
+    ['\supset: \forall y \in f(A_1) \cup f(A_2), y \in f(A_1 \cup A_2)']
+        'y \in f(A_1) \cup f(A_2)'をとる
+        <br>
+        ['y \in f(A_1 \cup A_2)' i.e. '\exists x \in A_1 \cup A_2; y = f(x)']
+            'y \in f(A_1) \cup f(A_2)'だから
+            'y \in f(A_1) \vee y \in f(A_2)'
+            <br>
+            'y \in f(A_1)'のとき
+                'y \in f(A_1)'だから
+                '\exists x \in A_1; y = f(x)'
+                そのように'x'をとる
+                <br>
+            'y \in f(A_2)'のとき
+                'y \in f(A_2)'だから
+                '\exists x \in A_2; y = f(x)'
+                そのように'x'をとる
+                <br>
+                <br>
+            ['y = f(x)']
+                'x'の取り方より
+                'y = f(x)'
+                <br>
+</details>
+<br>
+
+<h3>3.3 ☆☆☆☆</h3>
+Show: 'f(A_1 \cap A_2) \subset f(A_1) \cap f(A_2)' <br>
+<br>
+<details>
+<summary>証明</summary>
+[Claim: 'f(A_1 \cap A_2) \subset f(A_1) \cap f(A_2)' i.e. '\forall y \in f(A_1 \cap A_2), y \in f(A_1) \cap f(A_2)']
+    'y \in f(A_1 \cap A_2)'をとる
+    <br>
+    ['y \in f(A_1) \cap f(A_2)' i.e. 'y \in f(A_1) \wedge y \in f(A_2)']
+        ['y \in f(A_1)' i.e. '\exists x \in A_1; y = f(x)']
+            'y \in f(A_1 \cap A_2)'だから
+            '\exists x \in A_1 \cap A_2; y = f(x)'
+            そのように 'x' をとる
+            <br>
+            ['y = f(x)']
+                'x'の取り方より
+                'y = f(x)'
+                <br>
+        ['y \in f(A_2)' i.e. '\exists x \in A_2; y = f(x)']
+            'y \in f(A_1 \cap A_2)'だから
+            '\exists x \in A_1 \cap A_2; y = f(x)'
+            そのように 'x' をとる
+            <br>
+            ['y = f(x)']
+                'x'の取り方より
+                'y = f(x)'
+                <br>
+</details>
+<br>
+
+<h3>3.4 ☆☆</h3>
+Find: 'f(A_1 \cap A_2) \supset f(A_1) \cap f(A_2)'とならない'X,Y,A_1,A_2,f'の例 <br>
+<br>
+<details>
+<summary>例</summary>
+    'X = \{0,1\}'
+    'Y = \{a\}'
+    'A_1 = \{0\}'
+    'A_2 = \{1\}'
+    'f: X \rightarrow Y'
+    '0 \mapsto a'
+    '1 \mapsto a'
+    とする
+    <br>
+    'f(A_1 \cap A_2) = f(\emptyset) = \emptyset'
+    'f(A_1) \cap f(A_2) = \{a\} \cap \{a\} = \{a\}'
+    よって
+    'f(A_1 \cap A_2) \supset f(A_1) \cap f(A_2)'ではない
+</details>
+<br>
+
+<h3>3.5 ☆☆☆☆</h3>
+Show: 'f(A_1 \setminus A_2) \supset f(A_1) \setminus f(A_2)' <br>
+<br>
+<details>
+<summary>証明</summary>
+[Claim: 'f(A_1 \setminus A_2) \supset f(A_1) \setminus f(A_2)' i.e. '\forall y \in f(A_1) \setminus f(A_2), y \in f(A_1 \setminus A_2)']
+    'y \in f(A_1) \setminus f(A_2)'をとる
+    <br>
+    ['y \in f(A_1 \setminus A_2)' i.e. '\exists x \in A_1 \setminus A_2; y = f(x)']
+        'y \in f(A_1) \setminus f(A_2)'だから
+        'y \in f(A_1) \wedge y \notin f(A_2)'
+        <br>
 
 
 </details>
-
+<br>
 
 <br><br>
 </div>

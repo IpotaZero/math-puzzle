@@ -1,0 +1,165 @@
+<h2>同型</h2>
+
+<!-- prettier-ignore -->
+<div class="note">
+<br><br>
+'V_1,V_2,V,W':有限次元'K'ベクトル空間<br>
+
+<br>
+<h3>7.1</h3>
+<br>
+'f:V \rightarrow W':線形写像 <br>
+<br>
+Show: 'V/\ker f \simeq \im f' (ベクトル空間の準同型定理)
+<br>
+
+<br>
+<h3>7.2</h3>
+<br>
+'f:V_1 \rightarrow (V_1 + V_2)/V_2;u\rightarrow[u]' <br>
+
+<br>
+<h4>(1)</h4>
+Show: 'f'は全射
+<br>
+
+<br>
+<h4>(2)</h4>
+Show: '\ker f = V_1 \cap V_2'
+<br>
+
+<br>
+<h4>(3)</h4>
+Show: 'V_1/(V_1 \cap V_2) \simeq (V_1 + V_2)/V_2'
+<br>
+
+<br>
+<h3>7.3</h3>
+<br>
+'\varphi:V \rightarrow V^{**};u\mapsto(g:V^*\rightarrow K;f\mapsto f(u))'
+<br>
+Show: '\varphi'は同型写像
+<br>
+<br>
+<h3>7.4</h3>
+'f: V \rightarrow W':線形写像 <br>
+'f^*: W^* \rightarrow V^*; g \mapsto g \circ f' <br>
+<br>
+<h4>(1)</h4>
+'h \in (W/\im f)^*' <br>
+'\-{h} \in W^* ; u \rightarrow h([u])' <br>
+<br>
+Show: '\-{h} \in \ker f^*'
+<br>
+<details>
+<summary>証明</summary>
+[Claim:  '\-{h} \in \ker f^*' i.e. 'f^*(\-{h}) = 0_{V^*}' i.e. '\forall v \in V,f^*(\-{h}){v} = 0_K']
+    'v \in V'をとる
+    <br>
+    ['f^*(\-{h})(v) = 0_K']
+        'f^*(\-{h})(v) = (\-{h} \circ f)(v) = \-{h}(f(v)) = h([f(v)])'
+        <br>
+        'f(v) - 0_W = f(v) \in \im f'だから
+        '[f(v)] = [0_W] = 0_{W / \im f}'
+        <br>
+        よって
+        '\-{h}(f(v)) = h(0_{W / \im f}) = 0_K'
+        したがって
+        'f^*(\-{h})(v) = 0_K'
+        <br>
+</details>
+<br>
+<br>
+<h4>(2)</h4>
+'\varphi:(W/\im f)^* \rightarrow \ker f^* ; h \rightarrow \-{h}' <br>
+<br>
+Show: '\varphi'は同型写像
+<br>
+<details>
+<summary>証明</summary>
+[Claim: '\varphi'は同型写像 i.e. '\varphi'は線形写像で全単射]
+    ['\varphi'は線形写像 i.e. 和とスカラー倍について確認]
+        [和:'\forall h_0,h_1 \in (W/\im f)^*, \varphi(h_0+h_1) = \varphi(h_0)+\varphi(h_1)']
+            'h_0,h_1 \in (W/\im f)^*'をとる
+            <br>
+            ['\varphi(h_0+h_1) = \varphi(h_0)+\varphi(h_1)' i.e. '\forall w \in W, \varphi(h_0+h_1)(w) = (\varphi(h_0)+\varphi(h_1))(w)']
+                'w \in W'をとる
+                <br>
+                ['\varphi(h_0+h_1)(w) = (\varphi(h_0)+\varphi(h_1))(w)']
+                    '\varphi(h_0+h_1)(w) = \-{(h_0+h_1)}(w) = (h_0+h_1)([w])'
+                    '= h_0([w]) + h_1([w])'
+                    <br>
+                    '(\varphi(h_0)+\varphi(h_1))(w) = \varphi(h_0)(w)+\varphi(h_1)(w)'
+                    '= \-{h_0}(w)+\-{h_1}(w) = h_0([w])+h_1([w])'
+                    <br>
+                    よって'\varphi(h_0+h_1)(w) = (\varphi(h_0)+\varphi(h_1))(w)'
+                    <br>
+        [スカラー倍: '\forall h \in (W/\im f)^*, \forall c \in K, \varphi(ch) = c\varphi(h)']
+            'h \in (W/\im f)^*'をとる
+            'c \in K'をとる
+            <br>
+            ['\varphi(ch) = c\varphi(h)' i.e. '\forall w \in W, \varphi(ch)(w) = (c\varphi(h))(w)']
+                'w \in W'をとる
+                <br>
+                ['\varphi(ch)(w) = (c\varphi(h))(w)']
+                    '\varphi(ch)(w) = \-{(ch)}(w) = (ch)([w]) = ch([w])'
+                    <br>
+                    '(c\varphi(h))(w) = (c\-{h})(w) = c\-{h}(w) = ch([w])'
+                    <br>
+                    よって'\varphi(ch)(w) = (c\varphi(h))(w)'
+    ['\varphi'は全単射]
+        ['\varphi'は全射 i.e. '\forall w \in \ker f^*, \exists h \in (W / \im f)^* ; w^* = \varphi(h)']
+            'w \in \ker f^*'をとる
+            <br>
+            ['\exists h \in (W / \im f)^* ; w^* = \varphi(h)']
+                'n = \dim W'とする
+                '(u_1,...,u_n)'を'W'の基底とする
+                '([u_1],...,[u_m])' は 'W/\im f'の基底である
+                <br>
+                'h: W/\im f \rightarrow K ; [u_i] \mapsto w^*(u_i)'とおく
+                'h'はwell-defined,線形写像
+                <br>
+                ['w^* = \varphi(h)' i.e. '\forall w \in W, w^*(w)=\varphi(h)(w)']
+                    'w \in W'をとる
+                    ['w^*(w)=\varphi(h)(w)']
+                        '(u_1,...,u_n)'は'W'の基底だから
+                        '\exists c_1,...,c_n \in K ; w = c_1 u_1 + ... + c_n u_n'
+                        そのように 'c_1,...,c_n' をとる
+                        <br>
+                        'w^*(w) = w^*(c_1u_1+...+c_nu_n)'
+                        '       = c_1w^*(u_1) + ... + c_nw^*(u_n)'
+                        <br>
+                        '\varphi(h)(w) = \-{h}(w) = h([w]) = h([c_1u_1+...+c_nu_n])'
+                        '              = h(c_1[u_1]+...+c_n[u_n])'
+                        '              = c_1h([u_1])+...+c_nh([u_n])'
+                        '              = c_1w^*(u_1)+...+c_nw^*(u_n)'
+                        <br>
+                        よって'w^*(w)=\varphi(h)(w)'
+                        <br>
+        ['\varphi'は単射 i.e. '\forall h_0,h_1 \in (W/\im f)^*:\varphi(h_0)=\varphi(h_1),h_0=h_1']
+            'h_0,h_1 \in (W/\im f)^*:\varphi(h_0)=\varphi(h_1)'をとる
+            <br>
+            ['h_0=h_1' i.e. '\forall u \in W/\im f, h_0(u) = h_1(u)']
+                'u \in W/\im f'をとる
+                <br>
+                ['h_0(u) = h_1(u)']
+                    'u \in W/\im f'だから
+                    '\exists w \in W; u=[w]'
+                    'w'をそのようにとる
+                    <br>
+                    '\varphi(h_0)=\varphi(h_1)'だから
+                    '\-{h_0} = \-{h_1}'
+                    <br>
+                    よって '\-{h_0}(w) = \-{h_1}(w)'
+                    つまり'h_0([w]) = h_1([w])'
+                    したがって'h_0(u) = h_1(u)'
+
+
+
+                
+
+
+</details>
+
+<br>
+</div>
